@@ -1,0 +1,81 @@
+name: Spacing Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 2 * * *' # Daily at 2 AM
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    strategy:
+      matrix:
+        browser: [chromium, firefox, webkit]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      
+      - name: Run spacing tests
+        run: npx playwright test --project=${{ matrix.browser }}
+        env:
+          BASE_URL: ${{ secrets.TEST_URL || 'https://mvcbasev3.leia.tiarc-live.co.uk' }}
+      
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: reports/
+          retention-days: 30
+      
+      - name: Upload screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshots-${{ matrix.browser }}
+          path: reports/screenshots/
+          retention-days: 7
+      
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'reports/json/results.json';
+            
+            if (fs.existsSync(reportPath)) {
+              const results = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+              const body = `## Spacing Tests Results (${{ matrix.browser }})
+              
+              - ✅ Passed: ${results.stats?.expected || 0}
+              - ❌ Failed: ${results.stats?.unexpected || 0}
+              - ⏭️ Skipped: ${results.stats?.skipped || 0}
+              
+              [View full report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+              
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: body
+              });
+            }
