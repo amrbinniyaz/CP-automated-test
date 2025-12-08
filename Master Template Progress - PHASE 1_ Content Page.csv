@@ -1,0 +1,463 @@
+"Content Page Element
+XD file  • Mobile prototype  •  Desktop prototypes linked below",,No of Variants,"Styling variation
+The character style elements that can be changed are: alignment (where possible), font, weight, size, colour, opacity, line spacing, letter spacing, text container width (where possible)",Rules & Testing,Integration Notes,Design,,Assigned to:,F/E,Assigned to:,B/E,Assigned to:,"Inetgration
+details",QA,Tested by:,FE Notes
+,,,,,,1440px,375px,,,,,,,,,
+,"Margin Rules (external)
+(375, 1440, 2560px)","Screens 375px - 1440px -2560px
+Margin A: 60px - 90px - 140px
+Margin B: 40px - 50px - 70px
+Margin C: 30px - 40px - 60px
+Margin D: 20px - 30px - 30px",,,,,,,,,,,,,,
+,"Padding Rules (internal)
+(375, 1440, 2560px)","1440px done, 375 and 2560px to be finished",,,,,,,,,,,,,,
+TEXT FORMATTING.,"Headings 1, 2, 3, 4",-,"Character styles: 
+- Heading 1, 
+- Heading 2, Heading 2 (bold)
+- Heading 3, Heading 3 (bold)
+- Heading 4, Heading 4 (bold)","Heading 1-4:
+☐ Individual words are not breaking; instead the text uses end-of-line hyphenation (especially relevant for mobile)
+Heading 1:
+☐ The text container is wider than the rest of the page's text",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<h1> etc.,FALSE,,
+,Featured Paragraph (top of the page),2,"Variant 1:
+Internal padding
+Character styles: Featured Paragraph, Featured Paragraph (bold)
+Background: solid colour / image  with or without an overlay 
+SVG added within the background container (e.g. logo watermark)
+
+Variant 2:
+Character styles: Featured Paragraph, Featured Paragraph (bold)","☐ The featured paragraph under the header is not mandatory on the page.
+☐ The input field in the CMS should be separate from the main editor.
+☐ Top-of-the-page featured paragraph (Variant 1)'s text container is wider than the rest of the page's text
+NEW ☐ Variant 1 has no external padding above it (simply no gap between the header and the featured paragraph's background)
+NEW ☐ Variant 1's alignment should be centred by default. Variant 2's alignment should be left-aligned by default. Both can be overridden if the user changes the alignment manually in the CMS editor.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,First Paragraph text box,FALSE,,"- either is left aligned by default on all cases or centered based on likings, we don't have left alignment in cms "
+,Featured Paragraph (inline),,"Character styles: Featured Paragraph, Featured Paragraph (bold)","☐ Formatting for this is chosen from the dropdown and can be applied to any text
+☐ The text container should be bound to the content width (only the top-of-the-page featured paragraph can be wider than the content width)
+☐ Left-aligned by default. The alignment can be changed manually by the user.",,TRUE,TRUE,Natalia Gasior,TRUE,,TRUE,,,FALSE,,
+,Featured Text,-,"Character styles: Featured Text, Featured Text (bold)",,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,p.featuredText,FALSE,,
+,Quote Styling,-,"""quote marks"" - replace svg
+Character styles: Quote","☐ On mobile, the quote marks are above & below the text to allow it as much space as possible
+☐ Left-aligned by default. The alignment can be changed manually by the user.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<q>,FALSE,,
+,Body Copy,-,"Character styles: Body copy, Body Copy (bold)",,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<b>,FALSE,,
+,"Inline link (regular, PDF, email, new window)",-,"Character styles: Inline Link
+icon colour & thickness (or ability to replace the svg)
+with and without underline
+underline thickness & shape (e.g. wavy, straight, hand-drawn, etc - can be added as repeatable svg)
+spacing between text & underline",☐ Icon is never widowed,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<a>,FALSE,,
+,Buttons,-,"Character styles: Button
+Button:
+- internal padding
+- rounded corners (individually)
+- border (colour, thickness & opacity)
+- fill (colour and opacity)
+- drop shadow","☐ When a button is very long & wraps onto more than one line,  a single word is never widowed
+☐ All three types of buttons (primary, secondary, tertiary) work across the site 
+☐ All button types behave correctly when a lot of text has been inputted",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<button>,FALSE,,
+,Bullet Point List,-,"Shape: colour, opacity, rounded corners (individually), angle, ideally a replaceable SVG
+Character styles: Body copy, Body copy (bold)","☐ The text uses body copy styling
+☐ It is possible to indent the text within the bullet point list",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<ul>,FALSE,,
+,Numbered List,-,"Number: colour, font, weight, size
+Character styles: Body copy, Body copy (bold)
+Shape: colour, opacity, rounded corners (individually), angle, ideally a replaceable SVG","☐ The text uses body copy styling
+☐ It is possible to indent the text within the numbered list",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<ol>,FALSE,,
+,Table,-,"Character styles: Body copy, Body Copy (bold)
+Table: 
+- Background colour & opacity
+- Line thickness, colour & opacity
+- Rounded corners
+- Drop shadow","☐ When the table is wider than the content container, a fade* & scroll bar appear
+*Use a fade instead of a gradient, so that its colour is the same as the background's colour. ",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<table>,FALSE,,
+,Divider,-,"Width, thickness, colour, opacity
+Possible to replace with a repeatable SVG","☐ The padding of other widgets, placed above/below the divider, doesn't add to the divider's padding
+
+☐ Approx padding above & below divider:
+375px screen: 60px padding
+(1440px screen: 90px padding)
+2560px screen: 165px padding",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<hr>,FALSE,,
+CONTENT TEMPLATES,"Content Templates (half-half)
+image + HTML (& reverse)
+image carousel + HTML  (& reverse)
+video + HTML  (& reverse)
+",2,"Character styles: all
+Background: colour, opacity, SVG added within the background container (e.g. logo watermark)
+
+","☐ On mobile (up to 1259px), the HTML content is always positioned below the image/video content (e.g. IMG+HTML and HTML+IMG look the same on mobile).
+☐ The image carousel content template should always feature a gradient above the image and beneath the pagination.
+☐ Add a new field to CMS that allows you to add either a cover image or a video preview (optional, if not added, the video player fills the space) 
+☐ When the video is clicked, it opens a pop-up.
+☐ Template has a minimum height regardless of how little HTML has been added:
+   1. Range 1 (media above HTML):
+   - screen 375px-1259px: n/a, follow Padding Rule 2 (below)
+   2. Range 2 (media next to HTML): 
+   - screen 1260px: minimum 560px height
+   - screen 2560px: minimum 840px height
+
+☐ PADDING RULE (internal)
+Approx Internal Padding (above and below the HTML) should be:
+• Range 1 (media above HTML):
+screen 375px: 40px padding
+screen 1259px: 85px padding
+• Range 2 (media next to HTML): 
+screen 1260px: 85px padding (above & below HTML)
+screen 2560px: 200px padding (above & below HTML)
+
+☐ MARGIN RULE (external)
+Reduce margin to 0px when the content template is placed above or below an element that is full-width and has a background. These include:
+- another half-half content template*,
+- full-width content template,
+- full-width video,
+- header (all types),
+- featured Paragraph (variant 1),
+- event full-width promo (both variants),
+- admissions calculator (variant 1),
+- tickertape (variant 2),
+- notices list (both variants),
+- events list (both variants)
+- donations calculator,
+- quote carousel (variant 1),
+- widget carousel with a background (Upcoming Events, Related Stories).
+
+* If the designer chooses variant 2 for the half-half content templates (which don't have a background), reduce the padding to 50% instead of changing it to 0px
+",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,FALSE,Florian,{content-templates},FALSE,,
+,"Content Templates (half-half)
+widget + HTML / HTML + widget",2,,"☐ On mobile (up to 1259px), the widget is always positioned below the HTML (e.g. {stories}+HTML and HTML+{stories} look the same on mobile).
+☐ Content templates' background colour alternates when they are placed on top of each other
+☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible
+☐ The arrows are always positioned in the middle, centred to the viewport
+
+☐ PADDING RULE (internal)
+Approx Internal Padding should be:
+• Range 1 (widget below HTML):
+screen 375px: 50px padding
+screen 1259px: 85px  padding
+• Range 2 (widget next to HTML): 
+screen 1260px: 85px padding
+screen 2560px: 160px padding
+
+☐ MARGIN RULE (external)
+Reduce margin to 0px when the content template is placed above or below an element that is full-width and has a background. These include:
+- another half-half content template*,
+- full-width content template,
+- full-width video,
+- header (all types),
+- featured Paragraph (variant 1),
+- event full-width promo (both variants),
+- admissions calculator (variant 1),
+- tickertape (variant 2),
+- notices list (both variants),
+- events list (both variants)
+- donations calculator,
+- quote carousel (variant 1),
+- widget carousel with a background (Upcoming Events, Related Stories).
+
+* Unless it's a variant 2 content template (one without a background), then keep the padding",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,FALSE,,,FALSE,,
+,"Content Templates (full-width with image)
+full-width image
+full-width image with centred HTML
+full-width image with left-aligned HTML
+full-width image with right-aligned HTML",-,"Character styles: all
+Overlay: gradient's colour, opacity, direction, blurr effect","☐ This content template should have a minimum height:
+- 375px screen: minimum height of 275px
+- 2560px screen: minimum height of 1050px
+
+☐ Approx Internal padding:
+375px screen: 90px padding
+(1440px screen: 150px padding)
+2560px screen: 270px padding",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,FALSE,,,FALSE,,
+,"NEW Content Templates (full-width with background colour)
+full-width centred HTML
+full-width left-aligned HTML
+full-width right-aligned HTML",,,"☐ This content template should have a minimum height:
+- 375px screen: minimum height of 275px
+- 2560px screen: minimum height of 1050px
+
+☐ Approx Internal padding:
+375px screen: 90px padding
+(1440px screen: 150px padding
+2560px screen: 270px padding",,FALSE,FALSE,,TRUE,,FALSE,,,FALSE,,
+WIDGETS.,Admissions Calculator,2,"Variant 1:
+Internal padding
+Character styles: Heading 2, body copy, body copy bold
+Background: solid colour  / image  with or without an overlay 
+SVG added within the background container (e.g. logo watermark)
+Date input: 
+- shape: fill & border colour, rounded corners (individually), drop shadow
+- text: colour, font, weight, size, letter spacing
+
+Variant 2:
+Character styles: Heading 2, body copy, body copy bold
+Date input: 
+- shape: fill & border colour, rounded corners (individually), drop shadow
+- text: colour, font, weight, size, letter spacing","☐ Enable users to move between inputs without leaving the keyboard
+☐ Support the behaviour of the Backspace button across the input
+☐ Highlight the current field with a focus style",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{admissions},FALSE,,
+,Card,3,"Variant 1: 
+Character styles: Heading 5, body copy
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually)
+
+Variant 2:
+Character styles: Heading 5, body copy
+Image: rounded corners (individually)
+Gradient: colour, opacity, direction
+
+Variant 3:
+Character styles: Heading 5, body copy
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually)
+Gradient: colour, opacity, direction","☐ Only when a link/slide-out has been added, the arrow appears and the hover works
+☐ The card displays body copy from the summary field. Do not truncate.
+☐ Image's ratio is roughly 3:2, and adding more text doesn't affect it (it extends the card downwards).",multiple widgets,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,"- Only when a link/slide-out has been added, the arrow appears and the hover works -- if openSlide is checked in cms it will open a slide
+- The card displays body copy from the summary field. Do not truncate. -- if we don't have a limit in cms truncation has to happen. For now I added a 20 lines for description and 8 lines for title -"
+,Card Carousel,4 (arrows),"See ""Carousel arrows"" (row 8)","☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible
+☐ The card with the most content determines the height of every card in the carousel
+☐ Animate away the disappearing card (fade away effect?)
+",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{cards},FALSE,,
+,Card Grid,,-,"☐ On screens bigger than 1440px, display 4 cards in one row
+☐ Depending on the number of elements in the grid, it shifts the layout accordingly (the design includes layout for 1, 2, 3, 4, 5+ elements)
+☐ A card in a specific row with the most text determines the height of that row. Rows don't have to have an equal height.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{cards-grid},FALSE,,
+,Card slide-out,,in progress,in progress,,FALSE,FALSE,Natalia Gasior,TRUE,Adrian I,FALSE,,,FALSE,,
+,Donations Calculator,-,in progress,in progress,,FALSE,FALSE,Natalia Gasior,TRUE,Sebastian,FALSE,Florian,,FALSE,,
+,Event,3,"Character styles: Heading 5, body copy, (date is the exception, fonts chosen separately by the designer)
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually)
+Date: custom font choice (as mentioned above), rounded corners (individually), internal and external padding, colour, and opacity", ,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Events List,2,"Character styles: Heading 2, Heading 5, body copy,  (date is the exception, fonts chosen separately by the designer)
+Card: colour, rounded corners (individually), opacity
+Date: custom font choice (as mentioned above), rounded corners (individually), internal padding, colour, and opacity","☐ The image's height should be:
+   375px screen: 185px height
+   2560px screen: 400px height",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{events-list},FALSE,,
+,Events Carousel,2,"See ""Carousel arrows"" (row 8)","☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible
+☐ The event with the most content determines the height of every event in the carousel",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{events},FALSE,,
+,Events Grid,-,-,"☐ On screens bigger than 1440px, display 4 events in one row
+☐ Depending on the number of elements in the grid, it shifts the layout accordingly (the design includes layout for 1, 2, 3, 4, 5+ elements)
+☐ An event in a specific row with the most text determines the height of that row. Rows don't have to have an equal height.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{events-grid},FALSE,,
+,Event featured (full-width),2,"Variant 1: 
+Character styles: Heading 2, body copy
+Countdown: divider line's colour and opacity
+Image: rounded corners (individually), optional blurr effect
+Gradinet: colour and opacity
+Button (arrow): replaceable SVG
+Pagination: colour and opacity
+Date: custom font choice, rounded corners (individually), internal padding, colour, and opacity
+
+Variant 2:
+Character styles: Heading 2, body copy
+Countdown: divider line's colour and opacity
+Background: colour and opacity, rounded corners (individually)
+Button (arrow): replaceable SVG
+Pagination: colour and opacity
+Date: custom font choice, rounded corners (individually), internal padding, colour, and opacity","☐ Truncate body copy text after 2 lines
+☐ Approx Internal margin:
+375px screen: 90px margin
+(1440px screen: 150px margin)
+2560px screen: 275px margin",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{events-featured},FALSE,,
+,FAQs,2,"Variant 1:
+Character styles: Body copy, Body Copy (bold)
+Background shape: internal padding, colour, opacity, rounded corners (individual), drop shadow
+Icon: replacable SVG
+
+Variant 2:
+Character styles: Body copy, Body Copy (bold)
+Icon: replacable SVG
+Underline thickness & shape (e.g. wavy, straight, hand-drawn, etc - can be added as repeatable SVG)
+spacing between text & underline","☐ The icon (arrow or plus) changes when the FAQ is open
+☐ Multiple FAQs can stay open at the same time
+☐ All text formatting works correctly inside the FAQ",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{faqs},FALSE,,
+,Image Carousel,-,"Character styles: Heading 5, body copy
+Images: Rounded corners (individually), drop shadow, angle
+Arrows: same as other carousels","☐ Carousel doesn't autorotate
+☐ Carousel isn't looping",,TRUE,TRUE,Natalia Gasior,FALSE,Daniel,FALSE,Florian,interactive data,FALSE,,
+,Notices List,2,"Character styles: Heading 2, Heading 5, body copy
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually)","☐ Date & Time format should be easily switchable between UK and USA
+☐ Don't truncate the text
+☐ Only when a link has been added, the arrow appears and the hover works
+☐ The image's height should be:
+   375px screen: 185px height
+   2560px screen: 400px height",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{notices},FALSE,,
+,Portals,3,"Character styles: Promo
+Background: Rounded corners (individually), opacity, colour
+Arrow: optional, inherited from the main CP design","☐ Only when a link has been added, the arrow appears and the hover works
+☐ Link is not mandatory
+☐ A word or arrow is never widowed",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Portals Carousel,4 (arrows),"See ""Carousel arrows"" (row 8)","☐ All portals in the carousel should be top-aligned. If a promo contains more text than others, the additional text should wrap and extend downward without affecting the top alignment.
+☐ Unlimited number of portals can be added
+☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{portalicons},FALSE,,
+,Portals Grid,,-,"☐ The grid adapts to different numbers of portals as per the design:
+    - The maximum number of portals in a row is 3
+    - When just 1 portal has been added, it stretches to match the width of 3 promos, and the title appears within the rectangle rather than underneath it
+    - When the number of portals is not divisible by 3, the odd 1 or 2 portals stretch to match the width of a 3-portal row
+    - The extended portals always appear in the first row
+☐ On mobile, an odd number of portals ends with a wider promo at the end of the grid
+☐ All promos in a row should be top-aligned. If a promo contains more text than others, the additional text should wrap and extend downward without affecting the top alignment; it will simply push down the following row.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{portalicons-grid},FALSE,,
+,Profile,3,"Variant 1: 
+Character styles: Heading 5, body copy
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually), padding
+Button (plus): replaceable SVG
+
+Variant 2:
+Character styles: Heading 5, body copy
+Image: rounded corners (individually)
+Gradient: colour, opacity, direction
+
+Variant 3:
+Character styles: Heading 5, body copy
+Card: colour, rounded corners (individually), opacity
+Image: rounded corners (individually)
+Gradient: colour, opacity, direction","☐ Only when a link/slide-out has been, the arrow appears and hover works
+☐ The image is centred and fills the space",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Profiles Carousel,4 (arrows),"See ""Carousel arrows"" (row 8)","☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible
+☐ The profile with the most content determines the height of every profile in the carousel",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{profiles},FALSE,,
+,Profiles Grid,,-,"☐ Depending on the number of elements in the grid, it shifts the layout accordingly (the design includes layout for 1, 2, 3, 4, 5+ elements)
+☐ On screens bigger than 1440px, display 4 profiles in one row
+☐ A profile in a specific row with the most text determines the height of that row. Rows don't have to have an equal height.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{profiles-grid},FALSE,,
+,Profile Directory,,"Character styles: Button
+Background: rounded corners (individually), colour, opacity
+Search button: rounded corners (individually), icon colour 
+FAQ buttons: styling inherited from the main download button
+Arrows: inherited from the main CP design",,,TRUE,TRUE,Natalia Gasior,TRUE,Adrian I,FALSE,Florian,{profiles-filtered},FALSE,,
+,Profile slide-out,,in progress,in progress,,FALSE,FALSE,Natalia Gasior,TRUE,Adrian I,FALSE,,,FALSE,,
+,Promo,3,"Character styles: Heading 5, body copy
+Image: rounded corners (individually)
+Gradient: colour, opacity, direction","☐ Only when a link has been, the arrow appears and hover works
+☐ The amount of text doesn't affect the promo's width or height.",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Promos Carousel,4 (arrows),"See ""Carousel arrows"" (row 8)","☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{promos},FALSE,,
+,Promos Grid,,-,"☐ Depending on the number of elements in the grid, it shifts the layout accordingly (the design includes layout for 1, 2, 3, 4, 5+ elements)
+☐ On screens bigger than 1440px, display 4 promos in one row",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{promos-grid},FALSE,,
+,Promos end-of-page,,"Character styles: enlarged Heading 5, enlarged body copy
+Text: bottom aligned or centred
+Image: rounded corners (individually), padding
+Gradient: colour, opacity, direction",,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,automatic,FALSE,,
+,Quote Carousel,2,"Variant 1:
+quote mark svg
+Character styles: Quote, Quote source
+Background: none / solid colour  / image  with or without an overlay 
+SVG added within the background container (e.g. logo watermark)
+
+Variant 2:
+quote mark svg
+Text: alignment, colour, font, weight, size, line spacing, letter spacing, text container width","☐ Carousel doesn't autorotate
+☐ Carousel is looping",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{quotes},FALSE,,
+,Quote with images,,not started,not started,,FALSE,FALSE,Natalia Gasior,TRUE,Daniel,FALSE,,,FALSE,,
+,Routemap,,,,,TRUE,TRUE,Natalia Gasior,FALSE,Daniel,FALSE,Florian,,FALSE,,
+,Stats,,,"☐ Only when a link has been, the arrow appears and the hover works
+☐ None of the fields are mandatory
+☐ CMS fields (displaying in this order): Icon, Stat figure, Title, Body copy, Link (arrow)
+☐ The icon's container's max width is the same as the max width of the text
+☐ The stat figure will shrink in size if a word doesn't fit in one line (see the design comparison of ""100%"" vs ""INTSCHOOLS""",,TRUE,FALSE,Natalia Gasior,TRUE,,FALSE,,,FALSE,,
+,Stats Carousel,4 (arrows),"See ""Carousel arrows"" (row 8)","☐ The stat with the most content determines the height of every stat in the carousel
+☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{stats},FALSE,,
+,Stats Grid,,-,"☐ A stat in a specific row with the most text determines the height of that row. Rows don't have to have an equal height.
+☐ Depending on the number of elements in the grid, it shifts the layout accordingly (the design includes layout for 1, 2, 3, 4, 5+ elements)
+☐ On screens bigger than 1440px, display 4 stats in one row",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{stats-grid},FALSE,,
+,Story,3,"Character style: Inline link, body copy
+Card: Rounded corners (individually), colour, opacity
+Image: Rounded corners (individually), padding
+Button (plus): replaceable SVG","☐ Date should be relative (e.g. 2 days ago)
+☐ The text truncates after 4 lines of copy",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Stories Carousel,2,"See ""Carousel arrows"" (row 8)","☐ Pull max 12 stories
+☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{stories},FALSE,,
+,Stories Grid,,-,"☐ On screens bigger than 1440px, display 4 stories in one row
+☐ Max 8 stories appear on desktop and max 4 on mobile ",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,{stories-grid},FALSE,,
+,Stories Carousel end-of-page ,,Background colour and opacity,"☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,automatic,FALSE,,
+,Stories slide-out,,in progress,in progress,,FALSE,FALSE,Natalia Gasior,TRUE,Adrian I,FALSE,,,FALSE,,
+,Tickertape,2,"Character styles: Heading 4, body copy","☐ Autorotate
+☐ Pause on hover
+☐ Loop carousel",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,interactive data,FALSE,,
+,Video (inline or full-width),-,"Character styles: Heading 5
+Video: Rounded corners (individually), drop shadow, angle
+Button shape: colour, opacity, rounded corners (individually)
+Play/Pause icon: colour, border thickness, opacity, and ability to replace the SVG)","☐ Play a muted, short preview of the full video. 
+☐ The preview is uploaded to the CMS library, while the full video is a link from YouTube/Vimeo.
+☐ In-line video becomes full-width on mobile ",,TRUE,TRUE,Natalia Gasior,TRUE,,FALSE,,,FALSE,,
+,Video Grid (Landscape),-,"Character styles: Heading 5, Body Copy (bold)
+Image: Rounded corners (individually), drop shadow
+Play button: 
+- background shape: colour, rounded corners (individually), opacity
+- icon: colour, opacity, rounded corners (individually)","☐ The first 10 seconds of the video start playing (muted) on hover
+☐ The title never overlaps the play/pause button",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,interactive data,FALSE,,
+,Video Grid (Portrait),-,"Character styles: Heading 5, Body Copy (bold)
+Image: Rounded corners, drop shadow
+Play button: colour, opacity, rounded corners, replaceable SVG",,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,interactive data,FALSE,,
+,Video Carousel (Landscape),-,Same as Video Grid (Landscape),"☐ The first 10 seconds of the video start playing (muted) on hover
+☐ The title never overlaps the play/pause button
+☐ Carousel isn't looping
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to either end of the carousel
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,interactive data,FALSE,,
+,Video Carousel (Portrait),-,Same as Video Grid (Portrait),,,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,interactive data,FALSE,,
+,"Widget on top of video/image (profile, card, stories)",,not started,not started,,FALSE,FALSE,Natalia Gasior,FALSE,Daniel,FALSE,,,FALSE,,
+OTHER.,"Headers
+• Normal  V1 - V2 - V3 - V4
+• No Header  V1 - V2
+• Video  V1 - V2
+• Image Carousel (Fader)  V1 - V2",4,Character styles: Heading 1,"All headers:
+☐ Breadcrumbs display only Home and Level 1
+☐ Breadcrumbs display only on screens over 399px
+☐ Breadcrumbs work as expected
+☐ Notice buttons are positioned correctly (centred to the right side of the header space), regardless of which of the three buttons is/are displaying
+☐ The gradient over an image appears only together with the image, never before. If the image is still loading, a loader screen should display
+☐ The gradient under H1 is relative to how long H1 is - it grows when H1 is wrapping over multiple lines
+
+No Header
+☐ The height of the header is significantly reduced
+
+Video Header:
+☐ Video fills the header space
+☐ Video's default Vimeo framework is hidden
+☐ Video is playing automatically & looping (and the icon on the playback button displays a pause)
+☐ Video is muted by default (and the icon on the sound button displays a crossed speaker)
+☐ Buttons work as expected
+
+Image Carousel (Fader) Header:
+☐ Pagination is clickable & control the carousel as expected",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,"Load-in Transition
+V1 desktop - V1 mobile
+V2 desktop - V2 mobile",-,n/a,"☐ Displays on every content page load or refresh
+☐ If the header image hasn't loaded after 3 seconds, the load-in transition completes",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Throbber V1 - V2,-,n/a,"☐ If the header image hasn't loaded in time, a throbber should display instead (with a spinning wheel branded with the school's colours)
+☐ The gradient placed on top of the header image (both top & bottom) should fade in with the image - do NOT displat it when the throbber is active",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,-,FALSE,,
+,Carousel arrows,3,"Arrow buttons:
+- shape: colour, opacity, rounded corners (individually)
+- arrow: replaceable SVG
+Gradient fade: opacity and colour","☐ If buttons are placed next to each other, the right-facing ➡️ arrow displays on the right-hand side. If buttons are vertically stacked, the right-facing ➡️ arrow displays on the top.
+☐ The arrows are placed slightly off-centre inside the button to make them optically, rather than mathematically, centred
+☐ The appropriate arrow is ""greyed out"" and not clickable when you are at the beginning of the carousel
+☐ The appropriate arrow is ""greyed out"" and no longer clickable when you get to the end of the carousel. Do not allow the user to keep clicking the arrow, revealing ""empty slots"".
+☐ The carousel arrows don't appear when all elements are fully visible",,TRUE,TRUE,Natalia Gasior,TRUE,,FALSE,,,FALSE,,
+,Glossary,-,"Character styles: Body Copy (bold), Body Copy (small) for pop-up
+icon: colour, thickness (or ability to replace the SVG)
+pop-up: 
+- rounded corners, 
+- fill colour and opacity, 
+- border colour, thickness, and opacity
+- drop shadow","☐ Pop-up opens on hover and disappears when the cursor moves away.
+☐ The width of the pop-up adjusts to fit about 40 characters in one line
+☐ The ""i"" icon is never widowed
+☐ The triangle on the bottom of the pop-up always points to the ""i"" icon
+☐ When opened on mobile, the pop-up can be closed by either pressing the X button or by tapping anywhere off the pop-up","☐ Description, link & Image fields should be removed from the CMS.
+☐ Introduce character limit of....
+",TRUE,TRUE,Natalia Gasior,FALSE,Daniel,FALSE,Florian,,FALSE,,
+,Embedded Image,-,"Rounded corners (individually), drop shadow, angle","☐ Becomes full-width on mobile 
+☐ When a PNG is used instead of a JPG, any drop shadow that would normally appear with the JPG will not be displayed",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,TRUE,Florian,<img>,FALSE,,
+,Embedded Video,-,n/a,"☐ Display the framework of the platform (e.g. Vimeo or YouTube)
+☐ Respect the video's original ratio",,TRUE,TRUE,Natalia Gasior,TRUE,Daniel,FALSE,Florian,<iframe>,FALSE,,

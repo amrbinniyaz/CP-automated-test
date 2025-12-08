@@ -138,8 +138,8 @@ Tests internal spacing for components with backgrounds:
 Create a `.env` file with:
 
 ```bash
-BASE_URL=https://mvcbasev3.leia.tiarc-live.co.uk
-STAGING_URL=https://staging.yoursite.com
+BASE_URL=https://test-1-mvcbasev3.tiarc-staging.co.uk
+STAGING_URL=https://test-1-mvcbasev3.tiarc-staging.co.uk
 TIMEOUT=30000
 TOLERANCE=2
 ```
@@ -272,14 +272,8 @@ jobs:
 - [TypeScript Documentation](https://www.typescriptlang.org)
 - Project PRD: `prd.md`
 
-## 📄 License
 
-ISC
 
-## 👥 Authors
 
-Content Page Spacing Test Suite Team
 
----
-
-**Target URL**: https://mvcbasev3.leia.tiarc-live.co.uk/full-list-of-widgets#
+**Target URL**: https://test-1-mvcbasev3.tiarc-staging.co.uk/full-list-of-widgets

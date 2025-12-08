@@ -22,6 +22,7 @@ export const SELECTORS = {
     stories: '.module-widget--stories',
     events: '.module-widget--events', // Verified: exists (1 found on page)
     profiles: '.module-widget--profiles', // Verified: exists (4 found on page)
+    stats: '.module-widget--stats', // Verified: exists (stats carousel/grid)
   },
   cards: {
     storyCard: '.story-card',
@@ -30,6 +31,10 @@ export const SELECTORS = {
     eventCard: '.event-card', // Verified: exists (3 found on page)
     profileCard: '.profile-card', // Verified: exists (10 found on page)
     promoCard: '.promo-card', // Verified: exists (24 found on page)
+    statCard: '.stat-card', // Verified: exists (8 found on staging)
+    statCardHead: '.stat-card__head, .stat-head', // The figure/number - supports both naming conventions
+    statCardSubhead: '.stat-card__subhead, .stat-subhead', // The title - supports both naming conventions
+    statCardDescription: '.stat-card__description, .stat-description', // The description text
   },
   contentTemplates: {
     halfHalf: '.content-templates--equal-column', // Verified: actual class is content-templates--equal-column (note: templates is plural)

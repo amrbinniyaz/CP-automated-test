@@ -6,6 +6,7 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
+  timeout: 60000, // 60 seconds per test
   
   reporter: [
     ['html', { outputFolder: 'reports/html' }],
@@ -14,10 +15,12 @@ export default defineConfig({
   ],
   
   use: {
-    baseURL: process.env.BASE_URL || 'https://mvcbasev3.leia.tiarc-live.co.uk',
+    baseURL: process.env.BASE_URL || 'https://test-1-mvcbasev3.tiarc-staging.co.uk',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    navigationTimeout: 60000, // 60 seconds for page navigation
+    actionTimeout: 10000, // 10 seconds for actions
   },
   
   projects: [

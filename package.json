@@ -13,7 +13,7 @@
     "test:ui": "playwright test --ui",
     "report": "playwright show-report",
     "report:json": "node -e \"console.log(require('./reports/json/results.json'))\"",
-    "codegen": "playwright codegen https://mvcbasev3.leia.tiarc-live.co.uk",
+    "codegen": "playwright codegen https://test-1-mvcbasev3.tiarc-staging.co.uk/full-list-of-widgets",
     "install:browsers": "playwright install"
   },
   "keywords": [

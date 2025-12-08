@@ -11,7 +11,7 @@
       "paddings": {
         "top": 65.5556,
         "right": 0,
-        "bottom": 0,
+        "bottom": 47.4603,
         "left": 0
       }
     },
@@ -273,39 +273,24 @@
         "bottom": 0,
         "left": 30
       }
+    },
+    "stats": {
+      "selector": ".module-widget--stats",
+      "margins": {
+        "top": 0,
+        "right": 0,
+        "bottom": 90,
+        "left": 0
+      },
+      "paddings": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
     }
   },
   "cards": {
-    "storyCard": {
-      "selector": ".story-card",
-      "margins": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "paddings": {
-        "top": 0,
-        "right": 30,
-        "bottom": 0,
-        "left": 0
-      }
-    },
-    "storyCardContent": {
-      "selector": ".story-card__content",
-      "margins": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "paddings": {
-        "top": 30,
-        "right": 30,
-        "bottom": 30,
-        "left": 30
-      }
-    },
     "cardCarousel": {
       "selector": ".module-widget--has-carousel",
       "margins": {
@@ -318,21 +303,6 @@
         "top": 85,
         "right": 0,
         "bottom": 85,
-        "left": 0
-      }
-    },
-    "eventCard": {
-      "selector": ".event-card",
-      "margins": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "paddings": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
         "left": 0
       }
     },
@@ -362,6 +332,51 @@
       "paddings": {
         "top": 0,
         "right": 30,
+        "bottom": 0,
+        "left": 0
+      }
+    },
+    "statCard": {
+      "selector": ".stat-card",
+      "margins": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "paddings": {
+        "top": 0,
+        "right": 30,
+        "bottom": 0,
+        "left": 0
+      }
+    },
+    "statCardHead": {
+      "selector": ".stat-card__head, .stat-head",
+      "margins": {
+        "top": 0,
+        "right": 0,
+        "bottom": 5,
+        "left": 0
+      },
+      "paddings": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    },
+    "statCardSubhead": {
+      "selector": ".stat-card__subhead, .stat-subhead",
+      "margins": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "paddings": {
+        "top": 0,
+        "right": 0,
         "bottom": 0,
         "left": 0
       }
