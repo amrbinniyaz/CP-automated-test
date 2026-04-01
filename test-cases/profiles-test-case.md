@@ -503,6 +503,17 @@ profilesGridVariant = GeneralHelpers.QueryStringVariants(1, 1, "profilesGrid"),
 ### ~~BUG-PROF-003~~: REMOVED - Not a Bug
 **Reason:** Role `margin-top: 15px` correctly implements **Padding G** (gap between title and body copy) as per design spec.
 
+### BUG-PROF-003: SCSS Variable in Gradient (Theme Won't Cascade)
+| Field | Value |
+|-------|-------|
+| **Severity** | High |
+| **Component** | Profile Card V2/V3 |
+| **Location** | `/Website/Styles/_globals/_theme.scss` line 1331 |
+| **Description** | Gradient uses SCSS `$primaryColor` variable instead of CSS variable. This means the gradient color will NOT update when themes change at runtime. |
+| **Expected** | `background: linear-gradient(to bottom, rgba(var(--primary-color-rgb), 0) 0%, rgba(var(--primary-color-rgb), 1) 100%)` or similar CSS variable approach |
+| **Actual** | `background: linear-gradient(to bottom, rgba($primaryColor, 0) 0%, rgba($primaryColor, 1) 100%)` |
+| **Impact** | Theme cascade broken for gradient overlays |
+
 ---
 
 ## 🐛 ACCESSIBILITY BUGS
@@ -625,9 +636,10 @@ profilesGridVariant = GeneralHelpers.QueryStringVariants(1, 1, "profilesGrid"),
 | Category | Bugs Found | Severity |
 |----------|------------|----------|
 | **Styling/Padding** | 2 | Medium |
+| **Theme Cascade** | 1 | High (BUG-PROF-003: SCSS variable in gradient) |
 | **Accessibility** | 3 | 1 High, 2 Medium |
 | **Responsive/JS** | 1 | Low |
-| **TOTAL** | **6 bugs** | |
+| **TOTAL** | **7 bugs** | |
 
 ### Test Coverage
 - ✅ Font variables
